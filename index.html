@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Player</title>
+  <title>Video Page</title>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #111;
       margin: 0;
+      background: black;
+      overflow: hidden;
     }
     video {
-      width: 80%;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* Makes video fill screen */
     }
   </style>
 </head>
 <body>
-  <video controls autoplay>
+  <video autoplay muted loop>
     <source src="video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
